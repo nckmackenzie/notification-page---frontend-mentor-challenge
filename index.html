@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="./assets/icons8-notification-16.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
+    <title>Notifications Page</title>
+  </head>
+  <body>
+    <main class="flex items-center justify-center">
+      <div class="card flex flex-col">
+        <div class="card-title flex items-center justify-between">
+          <h1>Notifications</h1>
+          <span>3</span>
+          <button class="btn btn--ghost">Mark all as read</button>
+        </div>
+        <div class="flex flex-col f-gap-1">
+          <article class="notification flex items-center unread">
+            <img
+              src="./assets/users/avatar-mark-webber.webp"
+              alt="Mark Webber"
+            />
+            <div class="notification-info flex flex-col">
+              <h3>
+                <span>Mark Webber</span> reacted to your recent post
+                <span>My first tournament today!</span>
+                <span class="unread__badge"></span>
+              </h3>
+              <p>1min ago</p>
+            </div>
+          </article>
+          <article class="notification flex items-center unread">
+            <img
+              src="./assets/users/avatar-angela-gray.webp"
+              alt="Angela gray"
+            />
+            <div class="notification-info flex flex-col">
+              <h3>
+                <span>Angela Gray</span> followed you
+                <span class="unread__badge"></span>
+              </h3>
+              <p>5min ago</p>
+            </div>
+          </article>
+          <article class="notification flex items-center unread">
+            <img
+              src="./assets/users/avatar-jacob-thompson.webp"
+              alt="jacob thompson"
+            />
+            <div class="notification-info flex flex-col">
+              <h3>
+                <span>Jacob Thompson</span> has joined the group
+                <span>Chess Club!</span>
+                <span class="unread__badge"></span>
+              </h3>
+              <p>1min ago</p>
+            </div>
+          </article>
+          <article class="notification flex items-center">
+            <img
+              src="./assets/users/avatar-rizky-hasanuddin.webp"
+              alt="Rizky Hasanuddin"
+              class="self-start"
+            />
+            <div class="notification-info flex flex-col">
+              <h3>
+                <span>Rizky Hasanuddin</span> sent you a private message
+                <span class="unread__badge"></span>
+              </h3>
+              <p>5days ago</p>
+              <div class="message">
+                Hello, thanks for setting up the Chess Club. I've been a member
+                for a few weeks now and I'm already having lots of fun and
+                improving my game.
+              </div>
+            </div>
+          </article>
+          <article class="notification flex items-center">
+            <img
+              src="./assets/users/avatar-kimberly-smith.webp"
+              alt="Kimberly Smith"
+            />
+            <div class="notification-info flex flex-col">
+              <h3><span>Kimberly Smith</span> commented on your picture</h3>
+              <p>1week ago</p>
+            </div>
+            <img
+              src="./assets/users/image-chess.webp"
+              alt="Woman playing chess"
+              class="photo"
+            />
+          </article>
+          <article class="notification flex items-center">
+            <img
+              src="./assets/users/avatar-nathan-peterson.webp"
+              alt="Nathan Peterson"
+            />
+            <div class="notification-info flex flex-col">
+              <h3>
+                <span>Nathan Peterson</span> reacted to your recent post
+                <span>5 end-game strategies to increase your win rate</span>
+                <span class="unread__badge"></span>
+              </h3>
+              <p>2weeks ago</p>
+            </div>
+          </article>
+          <article class="notification flex items-center">
+            <img src="./assets/users/avatar-anna-kim.webp" alt="Anna Kim" />
+            <div class="notification-info flex flex-col">
+              <h3>
+                <span>Anna Kim</span> left the group
+                <span>Chess Club</span>
+                <span class="unread__badge"></span>
+              </h3>
+              <p>2weeks ago</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

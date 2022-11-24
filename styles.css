@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+:root {
+  /* colors */
+  --clr-primary-400: hsl(1, 90%, 64%);
+  --clr-secondary-400: hsl(219, 85%, 26%);
+  --clr-secondary-100: hsl(210, 60%, 98%);
+  --clr-secondary-200: hsl(211, 68%, 94%);
+  --clr-secondary-300: hsl(205, 33%, 90%);
+  --clr-gray-400: hsl(219, 14%, 63%);
+  --clr-gray-600: hsl(219, 12%, 42%);
+  --clr-secondary-800: hsl(224, 21%, 14%);
+
+  /* fonts */
+  --ff-caption: 'Plus Jakarta Sans', sans-serif;
+  --fw-normal: 500;
+  --fw-bolder: 800;
+
+  /* spacing */
+  --gap-1: 0.5rem;
+  --gap-2: 1rem;
+  --gap-3: 1.5rem;
+
+  /* border-radius */
+  --rounded-sm: 4px;
+  --rounded-md: 8px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: var(--ff-caption);
+  font-weight: var(--fw-normal);
+  background-color: var(--clr-secondary-100);
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+main {
+  height: 100%;
+}
+/* UTILITY CLASSES */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.f-gap-1 {
+  /* gap: var(--gap-1); */
+  gap: 0.25rem;
+}
+.self-start {
+  align-self: flex-start;
+}
+
+/* components */
+.card {
+  max-width: 36rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: var(--rounded-md);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0 var(--gap-2);
+  padding: var(--gap-3);
+  gap: var(--gap-2);
+}
+
+.card-title {
+  gap: var(--gap-1);
+}
+
+.card-title h1 {
+  font-size: 16px;
+  color: var(--clr-secondary-800);
+}
+
+.card-title span {
+  margin-right: auto;
+  display: inline-flex;
+  background-color: var(--clr-secondary-400);
+  border-radius: var(--rounded-sm);
+  font-size: 0.875rem;
+  color: var(--clr-secondary-100);
+  padding: 0 0.25rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  transition: all 0.2s ease-in;
+  color: var(--clr-gray-600);
+  padding: 0;
+}
+
+.btn--ghost {
+  background-color: transparent;
+}
+
+.btn--ghost:hover,
+.btn--ghost:focus {
+  color: var(--clr-secondary-400);
+}
+
+.notification {
+  gap: var(--gap-1);
+  padding: 0.5rem 0.875rem;
+  border-radius: var(--rounded-sm);
+}
+
+.notification.unread {
+  background-color: var(--clr-secondary-300);
+}
+
+.notification img {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+}
+
+.notification-info {
+  font-size: 0.75rem;
+  font-weight: var(--fw-normal);
+}
+
+.notification-info h3 {
+  font-size: inherit !important;
+  font-weight: normal;
+  color: var(--clr-gray-600);
+}
+
+.notification-info span {
+  font-weight: var(--fw-bolder);
+  transition: color 0.5s;
+  cursor: pointer;
+  color: var(--clr-secondary-800);
+}
+
+.notification-info span:hover {
+  color: var(--clr-secondary-400);
+}
+
+.notification-info span:nth-child(2) {
+  color: var(--clr-gray-600);
+}
+
+.notification-info span:nth-child(2):hover {
+  color: var(--clr-secondary-400);
+}
+
+.unread__badge {
+  display: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--clr-primary-400);
+  border-radius: 50%;
+  margin-left: 0.25rem;
+}
+.notification.unread .unread__badge {
+  display: inline-block;
+}
+
+.notification-info p {
+  color: var(--clr-gray-600);
+}
+
+.notification-info .message {
+  margin-top: 0.25rem;
+  border: 1px solid var(--clr-secondary-300);
+  padding: 0.75rem;
+  border-radius: var(--rounded-sm);
+  color: var(--clr-gray-600);
+  font-size: 12px;
+  line-height: 1.1;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+
+.notification-info .message:hover {
+  background-color: var(--clr-secondary-200);
+}
+
+.notification .photo {
+  margin-left: auto;
+  border-radius: var(--rounded-md);
+}
